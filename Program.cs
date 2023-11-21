@@ -1,5 +1,5 @@
 ﻿string mensagemDeBoasVindas = "Boas vindas ao sistema de música!";
-List<string> listaDasBandas = new List<string>();
+List<string> listaDasBandas = new List<string>{"One Direction"};
 
 
 void ExibirMensagemBoasVindas()
@@ -28,7 +28,7 @@ void ExibirOpcoesMenu()
             RegistrarBanda();
             break;
         case 2:
-            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+           MostrarBandasRegistradas();
             break;
         case 3:
             Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
@@ -48,12 +48,29 @@ void ExibirOpcoesMenu()
 void RegistrarBanda()
 {
     Console.Clear();
+    Console.WriteLine("***************************");
     Console.WriteLine("Registro de bandas");
+    Console.WriteLine("***************************\n");
     Console.Write("Digite o nome da banda que deseja registrar: ");
     string nomeDaBanda = Console.ReadLine()!;
     listaDasBandas.Add(nomeDaBanda);
     Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
     Thread.Sleep(2000);
+    Console.Clear();
+    ExibirOpcoesMenu();
+}
+
+void MostrarBandasRegistradas(){
+    Console.WriteLine("****************************************");
+    Console.WriteLine("Exibindo todas as bandas registradas: ");
+    Console.WriteLine("****************************************\n");
+
+    for (int i = 0; i < listaDasBandas.Count; i++)
+    {
+        Console.WriteLine($"Banda: {listaDasBandas[i]}");
+    }
+    Console.WriteLine("\nPressione em uma tecla para voltar ao Menu Principal.");
+    Console.ReadKey();
     Console.Clear();
     ExibirOpcoesMenu();
 }
