@@ -1,5 +1,7 @@
 ﻿string mensagemDeBoasVindas = "Boas vindas ao sistema de música!";
-List<string> listaDasBandas = new List<string>{"One Direction"};
+Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
+bandasRegistradas.Add("One Direction", new List<int> {10, 10, 8});
+bandasRegistradas.Add("Beatles", new List<int> ());
 
 
 void ExibirMensagemBoasVindas()
@@ -51,7 +53,7 @@ void RegistrarBanda()
     ExibirTituloOpcao("Registro das bandas: ");
     Console.Write("Digite o nome da banda que deseja registrar: ");
     string nomeDaBanda = Console.ReadLine()!;
-    listaDasBandas.Add(nomeDaBanda);
+    bandasRegistradas.Add(nomeDaBanda, new List<int>());
     Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
     Thread.Sleep(2000);
     Console.Clear();
@@ -67,7 +69,7 @@ void MostrarBandasRegistradas(){
 //        Console.WriteLine($"Banda: {listaDasBandas[i]}");
 //    }
 
-foreach (string banda in listaDasBandas)
+foreach (string banda in bandasRegistradas.Keys)
 {
     Console.WriteLine($"Banda: {banda}");
 }
