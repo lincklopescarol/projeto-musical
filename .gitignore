@@ -1,0 +1,39 @@
+# Arquivos de compilação
+bin/
+obj/
+
+# Arquivos de configuração
+*.user
+*.suo
+*.sln.docstates
+*.bak
+*.vscode/
+
+# Pacotes NuGet
+*.nuget/
+*.nupkg
+**/packages/*
+
+# Logs e arquivos temporários
+*.log
+*.swp
+*~
+__MACOSX/
+Thumbs.db
+ehthumbs.db
+
+# Ferramentas e arquivos do Visual Studio
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*/
+[Bb]in/
+[Oo]bj/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.cache
+*.ntvs_analysis.dat
+*.csproj.user
