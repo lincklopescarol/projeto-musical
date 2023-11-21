@@ -1,2 +1,11 @@
 ﻿string mensagemDeBoasVindas = "Boas vindas ao sistema de música!";
-Console.WriteLine(mensagemDeBoasVindas);
+
+
+void ExibirMensagemBoasVindas()
+{
+    Console.WriteLine("***********************************");
+    Console.WriteLine(mensagemDeBoasVindas);
+    Console.WriteLine("***********************************");
+}
+
+ExibirMensagemBoasVindas();
